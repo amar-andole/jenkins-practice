@@ -1,0 +1,21 @@
+pipeline {
+    agent 'none'
+    stages {
+        stage ('build'){
+        agent {
+            label 'slave1'
+        }
+        steps {
+            sh 'sleep 5'
+        }
+        }
+        stage ('tset') {
+            agent {
+                label 'slave2'
+            }
+            steps {
+                sh 'sleep 10'
+            }
+        }
+    }
+}
