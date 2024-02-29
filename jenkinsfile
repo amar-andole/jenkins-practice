@@ -2,7 +2,7 @@ pipeline {
     agent any
      parameters { 
         string(name: 'PARAM',
-        defaultValue: 'Input-parameter', 
+        defaultValue: '', 
         description: 'This is a string parameter')
          }
          stages {
