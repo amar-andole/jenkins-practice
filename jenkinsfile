@@ -1,19 +1,28 @@
 pipeline {
-    agent any 
-        stages {
-            stage ('build') {
-                steps {
-                    sh '''
-                    sleep 10
-                    '''
-                }
+    agent any
+    stages {
+        stage ('checkout') {
+            stepe {
+                sh '''
+                ls
+                echo "hi amar"
+                '''
             }
-        stage ('test') {
-                steps {
-                    sh '''
-                    sleep 10
-                    '''
-                }
         }
+        stage ('test') {
+            steps {
+                sh '''
+                #!/bin/bash
+                echo "hi"
+                '''
+            }
+        }  
+        stage('build') {
+            steps {
+                sh '''
+                mvn clean install
+                '''
+            }
         }
     }
+}
