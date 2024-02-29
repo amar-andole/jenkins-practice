@@ -1,7 +1,7 @@
 pipeline {
     agent any
      parameters { 
-        string(name: 'PARAM-STRING',
+        string(name: 'PARAM',
         defaultValue: 'Input-parameter', 
         description: 'This is a string parameter')
          }
@@ -9,14 +9,14 @@ pipeline {
             stage ('build') {
                 steps {
                     sh '''
-                    echo $PARAM-STRING
+                    echo $PARAM
                     sleep 5
                     '''
                 }
             }
             stage ('test') {
                 steps {
-                echo "${params.PARAM-STRING}"
+                echo "${params.PARAM}"
                 }
             }
          }
