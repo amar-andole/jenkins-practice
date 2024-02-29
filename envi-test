@@ -15,10 +15,7 @@ pipeline {
         }
         stage ('test') {
         steps {
-            sh '''
-            echo "$TEST $TEST1"
-            sleep 5
-            '''
+            echo ${env.TEST}  //java grrovy to echo env variable
         }
         }
     }
