@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    environment {
+        TEST = "123"
+        TEST1 = "456"
+    }
+    stages {
+        stage ('build') {
+        steps {
+            sh '''
+        echo "$TSET"
+        sleep 5
+        '''
+        }
+        }
+    stage {
+        stage ('test') {
+        steps {
+            sh '''
+            echo "$TSET $TEST1"
+            sleep 5
+            '''
+        }
+        }
+    }
+  }
+}
