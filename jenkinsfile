@@ -19,9 +19,12 @@ pipeline {
         }  
         stage ('build') {
             steps {
+                catchError (buildResult : 'success', stageResult:'failure') {
                 sh '''
                 mvn clean install
+                exit 1
                 '''
+            }
             }
         }
     }
