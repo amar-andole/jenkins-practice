@@ -21,7 +21,7 @@ pipeline {
             steps {
                 catchError (buildResult : 'success', stageResult:'failure') {
                 sh '''
-                mvn clean install
+                sleep 5
                 exit 1
                 '''
             }
