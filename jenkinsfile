@@ -17,7 +17,7 @@ pipeline {
                     '''
                 }
             }
-            stage('test3') {
+            stage ('test3') {
                 steps {
                     sh '''
                     echo "hi amar"
