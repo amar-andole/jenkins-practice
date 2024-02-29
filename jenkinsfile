@@ -17,7 +17,7 @@ pipeline {
             stage ('test') {
                 steps {
                    script {
-                    echo "${params.PARAM-STRING}"
+                    echo $"{params.PARAM-STRING}"
                    }
                 }
             }
