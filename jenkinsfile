@@ -1,0 +1,19 @@
+pipeline {
+    agnet any 
+        stages {
+            stage ('build') {
+                steps {
+                    sh '''
+                    sleep 10
+                    '''
+                }
+            }
+        stage ('test') {
+                steps {
+                    sh '''
+                    sleep 10
+                    '''
+                }
+        }
+        }
+    }
