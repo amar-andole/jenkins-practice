@@ -8,7 +8,7 @@ pipeline {
         stage ('build') {
         steps {
             sh '''
-        echo "$TSET"
+        echo "$TEST"
         sleep 5
         '''
         }
@@ -16,7 +16,7 @@ pipeline {
         stage ('test') {
         steps {
             sh '''
-            echo "$TSET $TEST1"
+            echo "$TEST $TEST1"
             sleep 5
             '''
         }
