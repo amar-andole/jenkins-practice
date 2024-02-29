@@ -15,7 +15,8 @@ pipeline {
         }
         stage ('test') {
         steps {
-            echo ${env.TEST}  //java grrovy to echo env variable
+            //java grrovy to echo env variable
+            echo ${env.TEST}  
         }
         }
     }
