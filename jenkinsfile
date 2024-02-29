@@ -24,6 +24,7 @@ pipeline {
                 sleep 5
                 exit 1
                 '''
+                }
             }
             }
         stage ('deploy') {
@@ -32,7 +33,6 @@ pipeline {
                 sleep 5
                 '''
              }
-        }
         }
     }
 }
